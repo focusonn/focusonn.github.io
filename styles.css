@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px) 0 0,
+    radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px) 25px 25px;
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 360px;
+  max-width: 90vw;
+  background: linear-gradient(to bottom, #111, #000);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+.screen {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+.prev {
+  font-size: 14px;
+  color: #aaa;
+  min-height: 18px;
+}
+
+.current {
+  font-size: 28px;
+  font-weight: bold;
+  min-height: 32px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #333, #000);
+  color: #fff;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #555, #222);
+}
+
+.op {
+  background: linear-gradient(to bottom, #fff, #d7d7d7);
+  color: #000;
+  font-weight: bold;
+}
+
+.equal {
+  background: linear-gradient(to right, #ffffff, #d7d7d7);
+  color: #000;
+  font-weight: bold;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 95vw;
+    padding: 12px;
+  }
+  .current {
+    font-size: 22px;
+  }
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <meta name="description" content="A simple calculator application">
+  <link rel="icon" type="image/png" href="public/focus.png">
+</head>
+<body>
+  <main class="container">
+    <section class="screen" id="screen">
+      <div id="prev" class="prev">&nbsp;</div>
+      <div id="current" class="current">0</div>
+    </section>
+
+    <section class="keys" id="keys">
+      <button class="btn op" data-action="clear">C</button>
+      <button class="btn op" data-action="neg">±</button>
+      <button class="btn op" data-action="percent">%</button>
+      <button class="btn op" data-action="/">÷</button>
+
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn op" data-action="*">×</button>
+
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn op" data-action="-">−</button>
+
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn op" data-action="+">+</button>
+
+      <button class="btn zero" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn equal" data-action="=">=</button>
+    </section>
+  </main>
+</body>
+</html>
